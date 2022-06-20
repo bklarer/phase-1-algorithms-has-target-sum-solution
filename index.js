@@ -1,13 +1,20 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  const arrayHandler = new Set()
+  for (const number of array) {
+      const subtractor = target - number
+      if (arrayHandler.has(subtractor)) return true;
+      arrayHandler.add(number)
+  }
+  return false
 }
 
 /* 
-  Write the Big O time complexity of your function here
+  Write the Big O time complexity of your function here O(n)
 */
 
 /* 
-  Add your pseudocode here
+  Add your pseudocode here 
+  use new Set to decrease the time complexity of adding two numbers in an array together to equal target
 */
 
 /*
